@@ -15,7 +15,8 @@ class Billets{
         $this->titre=$donnees['titre'];
         $this->contenu=$donnees['contenu'];
         $this->date_creation=$donnees['date_creation'];
-
     }
 }
+// hydrate : par les fonctions set -> permet de changer des éléments sur la BDD sans modifier son code
+// utiliser les set
 ?>

@@ -11,12 +11,13 @@ try{
        echo $e->getMessage();
 }
 
-// include/require les pages et usages 
-spl_autoload_register('requireClass'); 
-
+// include/require les pages 
 function requireClass($classe){
     require $classe .'.php';
 }
+spl_autoload_register('requireClass'); 
+
+
 
 $listeBillet = new BilletsManager($bdd);
 
@@ -26,14 +27,11 @@ foreach($billets as $billet){
     var_dump($billet);
 }
 
-
-
-// include ('resultat.php'); 
-
+/* 1 - Class Billet avec connexion à la BDD
 // $reponse = $bdd->query('SELECT * FROM billets');
 // $retour = $reponse->fetch();
-
 // $welcome = new Billets($retour);
 // var_dump($welcome);
+*/
 
 ?>
