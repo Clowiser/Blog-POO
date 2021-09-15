@@ -60,7 +60,6 @@ class Billets{
            }
     } // AV : c'est qu'on peut ajouter des setters à l'infini dans cette méthode 
 
-
     // public function hydrate($donnees){
         // $this->id=$donnees['id'];
         // $this->titre=$donnees['titre'];
