@@ -1,5 +1,4 @@
 <?php
-
 // class Billets{
 //     private int $id;
 //     private string $titre;
@@ -42,15 +41,15 @@ class Billets{
         $this->date_creation=$date_creation;
     }
 
-
     public function __construct(array $donnees){
         $this->hydrate($donnees);
     }
+    //Les classes qui possèdent une méthode constructeur appellent cette méthode à chaque création d'une nouvelle instance de l'objet - initialisations dont l'objet a besoin avant d'être utilisé.
 
     public function hydrate(array $donnees){
-        foreach ($donnees as $key => $value) {
-            // On fabrique le nom du setter correspondant à l'attribut :
-            $setter = 'set'.ucfirst($key);
+        foreach ($donnees as $key => $value) { // parcourt la tableau de la BDD
+            // On fabrique le nom du setter correspondant à l'attribut
+            $setter = 'set'.ucfirst($key); // ucfirst -> première lettre majsucule de la clé du tableau associatif
            // Si le setter correspondant existe :
             if (method_exists($this, $setter)) {
             // On appelle le setter = $setter contient son nom !!!

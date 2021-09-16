@@ -31,16 +31,6 @@ class Commentaires{
         $this->hydrate($donnees);
     }
 
-    public function getCommentaires($id_billet){
-        $listeComm = [];
-        $reqSQL="SELECT * FROM commentaires WHERE id = '$id_billet'";
-        $pdoStat = $this->_bdd->query($reqSQL);
-        while ($autresDonnees = $pdoStat ->fetch(PDO::FETCH_ASSOC)) {
-            $listeComm[] = new billets($autresDonnees);
-        }
-        return $listeComm;
-        }
-
     public function hydrate(array $donnees){
         foreach($donnees as $key => $value){
             $setter = 'set'.ucfirst($key);
@@ -48,10 +38,6 @@ class Commentaires{
             $this->$setter($value);
         }
     }
+    }
 }
-}
-
-
-// var_dump ($listeComm->getCommentaires());
-
 ?>

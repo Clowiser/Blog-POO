@@ -1,5 +1,5 @@
 <?php
-
+// classe billetsManager : transforme les objets en requête SQL
 class BilletsManager{
 
     private $_bdd; // Instance de PDO.
@@ -12,12 +12,10 @@ class BilletsManager{
         $billets = [];
         $reqSQL='SELECT * FROM billets';
         $pdoStat = $this->_bdd->query($reqSQL);
-        while ($autresDonnees = $pdoStat ->fetch(PDO::FETCH_ASSOC)) {
-            $billets[] = new billets($autresDonnees);
+        while ($donnees = $pdoStat ->fetch(PDO::FETCH_ASSOC)){ 
+            $billets[] = new billets($donnees);
         }
         return $billets;
         }
-       
     }
-
 ?>
