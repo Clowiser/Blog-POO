@@ -1,6 +1,6 @@
 <?php
 
-class Commentaires{
+class Commentaire{
     private int $id;
     private int $id_billet;
     private string $auteur;
@@ -31,13 +31,14 @@ class Commentaires{
         $this->hydrate($donnees);
     }
 
-    public function hydrate(array $donnees){ // lorsqu'il y a un array = une BOUCLE FOREACH
-        foreach($donnees as $key => $value){
-            $setter = 'set'.ucfirst($key);
+    public function hydrate(array $donnees){ // lorsqu'il y a un array = une BOUCLE FOREACH array $donnes sont des données brutes (qui viennent de la BDD) mais maintenant sont brutes
+        foreach($donnees as $key => $value){ // parcours le tableau asso
+            $setter = 'set'.ucfirst($key); 
         if (method_exists($this, $setter)) {
             $this->$setter($value);
         }
     }
     }
 }
+
 ?>
