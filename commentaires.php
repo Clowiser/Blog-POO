@@ -31,7 +31,7 @@ class Commentaires{
         $this->hydrate($donnees);
     }
 
-    public function hydrate(array $donnees){
+    public function hydrate(array $donnees){ // lorsqu'il y a un array = une BOUCLE FOREACH
         foreach($donnees as $key => $value){
             $setter = 'set'.ucfirst($key);
         if (method_exists($this, $setter)) {

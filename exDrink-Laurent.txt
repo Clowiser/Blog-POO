@@ -1,0 +1,28 @@
+Class Drink
+Class DrinkManager
+
+
+-> 3 boissons, 2 sont alcoolisées : comment faire pour ressortir uniquement les boissons alcoolisées ?
+0 - dans BDD = rajouter la colonne alcoolisées aux boissons concernés
+1 - attributs alcoolisées => private $alcoolisées
+2 - méthode => getAlcool()
+            => getNoAlcool()
+
+if ($drink->getAlcool() === true){
+    echo 'Boissons alcoolisées :"
+}
+-> pas la peine de mettre === true car if attend un booléen 
+
+
+
+
+INFOS : 
+1 octet = 8 bits
+
+- on met dans DrinkManager car c'est la class ou on met les requêtes !
+
+- Transtypage = on force un type -> un int (1/0) est transformé en booléen (true/false) 
+    -> tinyint (tout petit entier = 0/1)
+    $this -> example = (bool) $date['$example'];
+
+- Convention : attribut de type booléen on écrit la méthode public functon isexample 

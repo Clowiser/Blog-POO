@@ -4,7 +4,7 @@ class BilletsManager{
 
     private $_bdd; // Instance de PDO.
     
-    public function __construct($pdo) {
+    public function __construct($pdo) { // la variable $pdo est dans un autre fichier - si elle était dans la fonction __construct, on ne la mettrait pas en argument de la fonction
     $this->_bdd = $pdo;
     }
 

@@ -1,0 +1,4 @@
+ Manager (ou Entity Manager) => Design Patterns (façon d'organiser) (Class Manager)
+
+
+ Heritage on y trouve dans les MVC => caractéristique des controleurs
